@@ -45,7 +45,7 @@ app.innerHTML = `
     <header class="top">
       <div class="brand">
         <div class="name">ppm._.art</div>
-        <div class="tag">Dibujo realista · Port</div>
+        <div class="tag">Dibujo realista · Portafolio</div>
       </div>
       <nav class="nav">
         <a class="pill" href="#galeria">Galería</a>
