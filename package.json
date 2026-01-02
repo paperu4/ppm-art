@@ -1,0 +1,15 @@
+{
+  "name": "ppm-art",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "galeria": "node scripts/gen-obras.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.2.4"
+  }
+}

@@ -1,0 +1,267 @@
+:root{
+  --bg:#fbfaf7;
+  --paper:#ffffff;
+  --ink:#121212;
+  --muted:#5e5e5e;
+  --line:rgba(0,0,0,.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
+  --max:1120px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(900px 600px at 15% -10%, rgba(0,0,0,.05), transparent 60%),
+    radial-gradient(900px 600px at 85% 0%, rgba(0,0,0,.04), transparent 55%),
+    var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+a{color:inherit; text-decoration:none}
+.wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 70px}
+
+.top{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:14px 0 18px;
+  border-bottom:1px solid var(--line);
+}
+
+.brand .name{font-weight:800; letter-spacing:.2px}
+.brand .tag{color:var(--muted); font-size:13px; margin-top:3px}
+
+.nav{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.pill{
+  padding:10px 12px; border-radius:999px;
+  border:1px solid var(--line); background:rgba(255,255,255,.6);
+}
+.pill:hover{transform: translateY(-1px)}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:18px;
+  padding:28px 0 18px;
+  align-items:stretch;
+}
+
+.heroCard{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow: var(--shadow);
+}
+
+h1{margin:0 0 10px; font-size:44px; line-height:1.05}
+.lead{margin:0 0 16px; color:var(--muted); line-height:1.65; font-size:16px}
+
+.cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 14px; border-radius:999px;
+  background:var(--ink); color:white; font-weight:800;
+  border:1px solid rgba(0,0,0,.15);
+}
+.btn:hover{transform: translateY(-1px)}
+.btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+
+.preview{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3f3;
+}
+
+.heroCard.preview{
+  max-height:520px;
+}
+
+.preview img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+.section{padding:34px 0 0}
+.sectionHead{display:flex; justify-content:space-between; gap:16px; align-items:flex-end; flex-wrap:wrap}
+.sectionHead h2{margin:0; font-size:22px}
+.sectionHead p{margin:6px 0 0; color:var(--muted)}
+
+.grid{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+.piece{
+  margin:0;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--paper);
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+.piece img{
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  background:#f3f3f3;
+}
+.piece:hover img{transform: scale(1.03)}
+
+.boxes{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+.box{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+.box h3{margin:0 0 8px; font-size:16px}
+.box ul{margin:0 0 0 18px; color:var(--muted); line-height:1.7}
+
+.foot{
+  margin-top:26px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  display:flex; gap:10px; flex-wrap:wrap;
+  font-size:13px;
+}
+
+@media (max-width: 980px){
+  .hero{grid-template-columns: 1fr}
+  h1{font-size:36px}
+  .grid{grid-template-columns: repeat(2,1fr)}
+  .piece img{height:260px}
+  .boxes{grid-template-columns: 1fr}
+}
+@media (max-width: 520px){
+  h1{font-size:30px}
+  .grid{grid-template-columns: 1fr}
+  .piece img{height:260px}
+}
+
+
+/* ===== Lightbox Pro ===== */
+.lightbox{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.86);
+  display:flex; align-items:center; justify-content:center;
+  z-index:9999; padding:18px;
+}
+
+.lightbox .frame{
+  position:relative;
+  width:min(92vw, 980px);
+  height:min(86vh, 760px);
+  display:flex; align-items:center; justify-content:center;
+}
+
+.lightbox img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  transform: scale(var(--z, 1));
+  transform-origin:center;
+  transition: transform .08s linear;
+  border-radius:10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.55);
+  cursor: zoom-in;
+  transition: transform .08s linear, opacity .18s ease;
+}
+
+.lb-btn{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  border:1px solid rgba(255,255,255,.18);
+  background: rgba(20,20,20,.55);
+  color:#fff;
+  width:44px; height:44px;
+  border-radius:999px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+  cursor:pointer;
+  user-select:none;
+}
+
+.lb-btn:hover{ background: rgba(40,40,40,.65); }
+
+.lb-prev{ left:-12px; }
+.lb-next{ right:-12px; }
+
+.lb-close{
+  position:absolute;
+  top:-12px; right:-12px;
+  width:44px; height:44px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background: rgba(20,20,20,.55);
+  color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.lb-hint{
+  position:absolute;
+  bottom:-34px;
+  left:0; right:0;
+  text-align:center;
+  color: rgba(255,255,255,.75);
+  font-size:12px;
+}
+
+/* Botón fijo (móvil) */
+.fab{
+  display:none;
+}
+
+@media (max-width: 980px){
+  .fab{
+    position:fixed;
+    left:16px;
+    right:16px;
+    bottom:14px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:14px 16px;
+    border-radius:999px;
+    background: var(--ink);
+    color:white;
+    font-weight:800;
+    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    z-index: 9000;
+  }
+
+  /* deja espacio para que el botón no tape el contenido */
+  .wrap{
+    padding-bottom: 110px;
+  }
+}
+
+.lb-counter{
+  position:absolute;
+  top:12px;
+  left:12px;
+  color: rgba(255,255,255,.85);
+  font-size:13px;
+  letter-spacing:.3px;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(20,20,20,.55);
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+
