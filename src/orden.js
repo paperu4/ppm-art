@@ -8,5 +8,6 @@ export const ORDEN = [
   "pajaro.jpg",
   "ciervo.jpg",
   "desnudo.jpg",
+  "caballo.jpg",
   // añade aquí más nombres, en el orden que quieras
 ];
