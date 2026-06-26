@@ -1,0 +1,7 @@
+{
+  "name": "ppm-art",
+  "framework": "nextjs",
+  "devCommand": "npm run dev",
+  "buildCommand": "npm run build",
+  "localUrl": "http://localhost:3000"
+}

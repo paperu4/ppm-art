@@ -1,0 +1,16 @@
+{
+  "name": "ppm-art",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build",
+    "preview": "next start"
+  },
+  "dependencies": {
+    "next": "^16.2.9",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  }
+}
