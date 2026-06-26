@@ -17,6 +17,7 @@ dist-ssr
 .opencode
 opencode.json
 skills-lock.json
+AGENTS_TEMPLATE.md
 
 # Editor directories and files
 .vscode/*
