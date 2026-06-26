@@ -1,12 +1,15 @@
 import etiqueta from './assets/branding/etiqueta.jpg'
 import caballo from './assets/obras/caballo.jpg'
+import caballoPastel from './assets/obras/caballo-pastel.jpg'
 import ciervo from './assets/obras/ciervo.jpg'
 import cristo from './assets/obras/cristo.jpg'
 import desnudo from './assets/obras/desnudo.jpg'
 import elefante from './assets/obras/Elefante.jpg'
 import jirafa from './assets/obras/jirafa.jpg'
 import leon from './assets/obras/leon.jpg'
+import paisaje from './assets/obras/Paisaje.jpg'
 import pajaro from './assets/obras/pajaro.jpg'
+import rostroCristo from './assets/obras/rostro-cristo.jpg'
 import torero from './assets/obras/torero.jpg'
 import toro from './assets/obras/toro.jpg'
 
@@ -18,6 +21,9 @@ export const brandImage = {
 }
 
 export const obras = [
+  { src: paisaje, file: 'Paisaje.jpg', title: 'Paisaje', alt: 'Dibujo realista de un paisaje' },
+  { src: rostroCristo, file: 'rostro-cristo.jpg', title: 'Rostro de Cristo', alt: 'Dibujo realista del rostro de Cristo' },
+  { src: caballoPastel, file: 'caballo-pastel.jpg', title: 'Caballo a pastel', alt: 'Dibujo de un caballo realizado a pastel' },
   { src: elefante, file: 'Elefante.jpg', title: 'Elefante', alt: 'Dibujo realista de un elefante' },
   { src: jirafa, file: 'jirafa.jpg', title: 'Jirafa', alt: 'Dibujo realista de una jirafa' },
   { src: cristo, file: 'cristo.jpg', title: 'Cristo', alt: 'Dibujo realista de Cristo' },

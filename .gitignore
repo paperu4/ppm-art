@@ -13,6 +13,8 @@ out
 dist
 dist-ssr
 *.local
+*.HEIC
+*.heic
 .agents
 .opencode
 opencode.json
